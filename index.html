@@ -3,22 +3,24 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>HTML Academy: Нёрдс</title>
 </head>
-<!-- Не стал загромождать дивами и приписывать классы,( классы написал где явное разделение блоков, чтоб было легко понять в дальнейшем к чему относится) 
-так-как без файла CSS это бессмысленно-->
 
 <body>
   <header>
     <nav>
-      <a><img src="https://via.placeholder.com" width="160" height="65" alt="logo"></a>
+      <a><img src="img/nerds-logo.svg" width="160" height="65" alt="logo"></a>
       <ul>
         <li><a href="blank.html">Студия</a></li>
         <li><a href="blank.html">Клиенты</a></li>
         <li><a href="catalog.html">Магазин</a></li>
         <li><a href="blank.html">Контакты</a></li>
       </ul>
-      <a href="blank.html">Корзина</a>
+        <div class="basket-shop"><a href="blank.html">Корзина</a></div>
     </nav>
   </header>
   <main>
@@ -26,87 +28,103 @@
     <section>
       <h2>Долго, дорого, скрупулезно.</h2>
       <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-      <a href="blank.html">УЗНАТЬ БОЛЬШЕ</a>
-      <div class="carousel">
-        <img src="https://via.placeholder.com" width="760" height="431" alt="carousel">
-        <!-- С каруселью не сталкивался, добавил символический div-->
+      <a href="blank.html">Узнать больше</a>
+      <div class="slider">
+        <div class="slider-item active">
+           <a href="#"></a><img src="img/nerds-slider/nerds-slider-show.png" width="760" height="431" alt="carousel">
+        </div>
+        <div class="slider-item">
+          <a href="#"></a><img src="img/nerds-slider/nerds-slider-second.png" width="760" height="431" alt="carousel">
+        </div>
+        <div class="slider-item">
+          <a href="#"></a><img src="img/nerds-slider/nerds-slider-third.png" width="760" height="431" alt="carousel">
+        </div>
+        <div class="controls">
+          <button type="button"></button>
+          <button type="button"></button>
+          <button type="button"></button>
+        </div>
       </div>
     </section>
     <section>
       <h2>Услуги</h2>
       <ul>
         <li>
-          <img src="https://via.placeholder.com" width="300" height="146" alt="web">
+          <div class="web"><img src="img/illustration-web.png" width="300" height="146" alt="web"></div>
           <h3>Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button type="submit">Заказать</button>
+          <a href="blank.html">Заказать</a>
         </li>
         <li>
-          <img src="https://via.placeholder.com" width="300" height="146" alt="applications">
+          <div class="applications"><img src="img/illustration-applications.png" width="300" height="146" alt="applications"></div>
           <h3>Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <button type="submit">Заказать</button>
+          <a href="blank.html">Заказать</a>
         </li>
         <li>
-          <img src="https://via.placeholder.com" width="300" height="146" alt="presentations">
+          <div class="presentatios"><img src="img/illustration-presentations.png" width="300" height="146" alt="presentations"></div>
           <h3>Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <button type="submit">Заказать</button>
+          <a href="blank.html">Заказать</a>
         </li>
       </ul>
     </section>
     <section>
-      <h2>О студии</h2>
-      <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
-        рук, как роботы.</p>
-      <p>Выполняем заказы на разработку:</p>
-      <ul>
-        <li>Веб-сайтов любой сложности</li>
-        <li>Мобильных приложений для iOS и Android</li>
-        <li>Слайдшоу и видео для корпоративных презентаций</li>
-      </ul>
-      <img src="https://via.placeholder.com" width="360" height="208" alt="nerds-illustration">
-      <p>с 2004 года Любим точность во всем:</p>
-      <table>
-        <tr>
-          <td>146%</td>
-          <td>100%</td>
-          <td>50%</td>
-        </tr>
-        <tr>
-          <td>Уровень самоотдачи</td>
-          <td>Соблюдение сроков</td>
-          <td>Минимальная предоплата</td>
-        </tr>
-      </table>
+      <div class="about_us">
+        <h2>О студии</h2>
+        <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
+          рук, как роботы.</p>
+        <p>Выполняем заказы на разработку:</p>
+        <ul>
+          <li>Веб-сайтов любой сложности</li>
+          <li>Мобильных приложений для iOS и Android</li>
+          <li>Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+      </div>
+      <div class="accuracy">
+        <img src="img/nerds-illustration.jpg" width="360" height="208" alt="nerds-illustration">
+        <p>с 2004 года Любим точность во всем:</p>
+        <dl>
+          <dt>146%</dt>
+          <dd>Уровень самоотдачи</dd>
+
+          <dt>100%</dt>
+          <dd>Соблюдение сроков</dd>
+
+          <dt>50%</dt>
+          <dd>Минимальная предоплата</dd>
+        </dl>
+      </div>
 
     </section>
     <section>
       <h2>Партнёры</h2>
       <ul>
-        <li><a href="blank.html"><img src="https://via.placeholder.com" width="200" height="68" alt="html-academy"></a>
+        <li><a href="#" target="blank.html"><img src="img/partners-links/logo-html.png" width="200" height="68" alt="html-academy"></a>
         </li>
-        <li><a href="blank.html"><img src="https://via.placeholder.com" width="209" height="90" alt="borodinski"></a>
+        <li><a href="#" target="blank.html"><img src="img/partners-links/logo-borodinski.png" width="209" height="90" alt="borodinski"></a>
         </li>
-        <li><a href="blank.html"><img src="https://via.placeholder.com" width="185" height="52" alt="pink"></a></li>
-        <li><a href="blank.html"><img src="https://via.placeholder.com" width="173" height="84" alt="mishka"></a></li>
-        <!-- Не знаю пока как использовать линейку в figma, поэтому размеры картинок некорректные -->
+        <li><a href="#" target="blank.html"><img src="img/partners-links/logo-pink.png" width="185" height="52" alt="pink"></a>
+        </li>
+        <li><a href="#" target="blank.html"><img src="img/partners-links/logo-miska.png" width="173" height="84" alt="mishka"></a>
+        </li>
       </ul>
     </section>
   </main>
   <footer>
-    <div class="map">
-      <img src="https://via.placeholder.com" width="1440" height="416" alt="map-footer">
-      <div class="contacts">
-        <h3>NЁRDS DESIGN STUDIO</h3>
+    <section class="map">
+      <h2>Карта</h2>
+      <img src="img/map.jpg" width="1440" height="416" alt="map-footer">
+      <section class="contacts">
+        <h2>Nerds design studio</h2>
         <p>191186, Санкт-Петербург,ул. Б. Конюшенная, д. 19/8</p>
-        <p>тел. +7 (812) 275-75-75</p>
-        <button type="submit">Напишите нам</button>
-        <img src="https://via.placeholder.com" width="230" height="190" alt="map-marker">
-      </div>
-    </div>
-    <div class="main-footer">
+        <p><a href="tel:78122757575">тел. +7 (812) 275-75-75</a></p>
+        <a href="#">Напишите нам</a>
+         <div class="marker"><img src="img/map-marker.png" width="230" height="190" alt="map-marker"></div>
+      </section>
+    </section>
+    <div class="social_wrapper">
       <ul>
         <li>
           <a href="#">Вконтакте</a>
@@ -118,8 +136,10 @@
           <a href="#">Инстаграм</a>
         </li>
       </ul>
-      <h2>Давайте дружить, это выгодно!</h2>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social_friends">
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </div>
   </footer>
   <section>
@@ -134,9 +154,11 @@
         <label for="email-login">Ваш email:</label>
         <input id="email-login" type="email" name="login" placeholder="email@example.com">
       </p>
-      <p>Текст письма:</p>
-      <p><textarea rows="5" cols="45" name="text"></textarea></p>
-      <p><input type="submit" value="Отправить"></p>
+      <p>
+        <label for="free-text">Текст письма:</label>
+        <textarea rows="5" cols="45" name="text" id="free-text" placeholder="В свободной форме"></textarea>
+      </p>
+      <p><button type="submit">Отправить</button></p>
     </form>
   </section>
 </body>
