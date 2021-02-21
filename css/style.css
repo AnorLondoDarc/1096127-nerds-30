@@ -40,12 +40,14 @@
     --basic-die-gray:#4D4D4D;
     --basic-gray:#E1E1E1;
     --basic-red:#E74246;
+    --basic-border-gray:#DBDBDB;
     --basic-green:#00BC6C;
     --basic-yellow:#EAB534;
     --basic-dark-red:#D7373B;
     --basic-dark-green:#00AA62;
     --basic-dark-yellow:#E5A722;
     --basic-white-30:rgba(225,225,225,.3);
+    --basic-black-30: rgba(0,0,0,.3);
 }
 .page-body p, .page-body h1,
 .page-body h2, .page-body h3 {
@@ -116,7 +118,6 @@
 
 /*header*/
 .page-header {
-
 }
 
 /*navigtion*/
@@ -131,13 +132,13 @@
   opacity: 0,5;
 }
 .page-navigation {
+  padding-top: 75px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
 .header-logo{
-  margin-top: 49px;
-
+  margin-top: -26px;
 }
 .page-navigation a{
   font-weight: 500;
@@ -163,7 +164,6 @@
 }
 .basket-shop,
 .site-navigation {
-  margin-top: 75px;
 }
 .site-navigation {
   display: flex;
@@ -491,6 +491,13 @@
   border-radius: 50%;
   margin: auto;
 }
+/*
+.social-btn-vk:active::before,
+.social-btn-fb:active::before,
+.social-btn-insta:active::before {
+  opacity: .3;
+}
+*/
 .social-btn:hover::before {
 background-color: var(--basic-red);
 }
@@ -505,11 +512,6 @@ background-color: var(--basic-red);
 }
 .social-btn-insta::before {
   content: url(../img/insta-icon.png);
-}
-.social-btn-vk:active::before,
-.social-btn-fb:active::before,
-.social-btn-insta:active::before {
-  color: var(--basic-white-30);
 }
 
                                                                   /*pop-up*/
@@ -538,6 +540,12 @@ background-color: var(--basic-red);
   text-align: center;
 }
 
+.form-group {
+  border: none;
+}
+.form-group p {
+  padding: 10px 0;
+}
 
 .catalog-wrap .container {
   display: flex;
@@ -548,6 +556,10 @@ background-color: var(--basic-red);
 }
 .catalog {
   width: 762px;
+}
+.user-sort {
+  display: inline-flex;
+  justify-content: space-between;
 }
 .sort-list {
   display: flex;
@@ -617,10 +629,23 @@ background-color: var(--basic-red);
   background-color: var(--basic-mdl-gray);
   color: var(--basic-text-gray);
 }
-
-
+.filter .submit-btn {
+  background-color: var(--basic-light-gray);
+  color: var(--basic-black);
+  padding: 15px 89px;
+}
+.filter .submit-btn:hover {
+ background-color: var(--basic-medium-gray);
+}
+.filter .submit-btn:active {
+  background-color: var(--basic-mdl-gray);
+  color: var(--basic-black-30);
+  border:none;
+}
                                                                         /*catalog-cards*/
-
+.catalog-cards {
+  padding-bottom: 15px;
+}
 .catalog-item {
   position: relative;
   width: 360px;
@@ -628,6 +653,7 @@ background-color: var(--basic-red);
   padding-top: 40px;
 }
 .hidden-descriptions{
+  padding: 20px 52px;
   position: absolute;
   text-align: center;
   display: none;
@@ -661,7 +687,7 @@ background-color: var(--basic-red);
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  margin-top: 26px;
+  margin-bottom: 12px;
   color: var(--basic-black);
 }
 .caption-desc-cards:hover {
@@ -670,11 +696,11 @@ background-color: var(--basic-red);
 .caption-desc-cards:active {
   color: var(--basic-text-gray);
 }
+/* НЕ РЕАГИРУЕТ НА ОТСТУПЫ*/
 .cards-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  margin-top: 12px;
   text-align: center;
 }
 
@@ -689,13 +715,43 @@ background-color: var(--basic-red);
 .hidden-descriptions .button:active{
   background-color: var(--basic-dark-red);
 }
-
+.pagination {
+  display: flex;
+  padding-bottom: 60px;
+}
+.pagination-list {
+  display: inline-flex;
+}
+.pagination-item {
+  display: flex;
+  min-width: 50px;
+  height: 50px;
+  background-color: var(--basic-light-gray);
+  margin-right: 11px;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-item:hover {
+  background-color: var(--basic-medium-gray);
+ }
+ .pagination-item:active {
+   background-color: var(--basic-mdl-gray);
+   color: var(--basic-black-30);
+   border:none;
+ }
+.pagination-list .active {
+  background-color: var(--basic-white);
+  border:3px solid var(--basic-border-gray);
+}
 .pagination a {
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-black);
+}
+.pagination-list .next {
+  padding: 0 77px;
 }
 .phone {
   color:var(--basic-black);
