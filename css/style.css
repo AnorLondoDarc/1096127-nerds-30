@@ -118,28 +118,27 @@
 
 /*header*/
 .page-header {
+  padding-top: 75px;
 }
 
 /*navigtion*/
 .header-logo {
   display: inline-flex;
+  margin-top: -26px;
 
 }
 .page-navigation .header-logo:hover {
   opacity: 0,5;
 }
 .page-navigation .header-logo:active {
-  opacity: 0,5;
+  opacity: 0,3;
 }
 .page-navigation {
-  padding-top: 75px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
-.header-logo{
-  margin-top: -26px;
-}
+
 .page-navigation a{
   font-weight: 500;
   font-size: 16px;
@@ -148,10 +147,10 @@
   text-decoration: none;
   color: var(--basic-black);
 }
-.page-navigation a:hover:not(.current) {
+.site-navigation a:hover:not(.current) {
   color: var(--basic-light-red);
 }
-.page-navigation a:active:not(.current) {
+.site-navigation a:active:not(.current) {
   color: var(--basic-black);
   opacity: 0.3;
 }
@@ -160,11 +159,8 @@
 
 }
 .nav-item a {
-  padding-bottom: 13px;
 }
-.basket-shop,
-.site-navigation {
-}
+
 .site-navigation {
   display: flex;
   min-width: 427px;
@@ -491,13 +487,13 @@
   border-radius: 50%;
   margin: auto;
 }
-/*
+
 .social-btn-vk:active::before,
 .social-btn-fb:active::before,
 .social-btn-insta:active::before {
   opacity: .3;
 }
-*/
+
 .social-btn:hover::before {
 background-color: var(--basic-red);
 }
@@ -539,7 +535,9 @@ background-color: var(--basic-red);
   font-weight: 500;
   text-align: center;
 }
-
+.catalog-wrap button {
+  border: none;
+}
 .form-group {
   border: none;
 }
@@ -617,6 +615,7 @@ background-color: var(--basic-red);
   font-size: 16px;
   line-height: 19px;
 }
+
 .filter-btn {
   background-color: var(--basic-light-gray);
   color: var(--basic-black);
@@ -633,6 +632,7 @@ background-color: var(--basic-red);
   background-color: var(--basic-light-gray);
   color: var(--basic-black);
   padding: 15px 89px;
+  border: none;
 }
 .filter .submit-btn:hover {
  background-color: var(--basic-medium-gray);
@@ -640,7 +640,6 @@ background-color: var(--basic-red);
 .filter .submit-btn:active {
   background-color: var(--basic-mdl-gray);
   color: var(--basic-black-30);
-  border:none;
 }
                                                                         /*catalog-cards*/
 .catalog-cards {
@@ -696,7 +695,7 @@ background-color: var(--basic-red);
 .caption-desc-cards:active {
   color: var(--basic-text-gray);
 }
-/* НЕ РЕАГИРУЕТ НА ОТСТУПЫ*/
+/* !-НЕ РЕАГИРУЕТ НА ОТСТУПЫ вариант дисплай-блок*/
 .cards-text {
   font-weight: 400;
   font-size: 16px;
@@ -736,8 +735,10 @@ background-color: var(--basic-red);
  }
  .pagination-item:active {
    background-color: var(--basic-mdl-gray);
-   color: var(--basic-black-30);
    border:none;
+ }
+ .pagination-item a:active {
+   color: var(--basic-black-30);
  }
 .pagination-list .active {
   background-color: var(--basic-white);
