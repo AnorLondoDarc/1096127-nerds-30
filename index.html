@@ -137,16 +137,16 @@
       <div class="container">
         <h2 class="visually-hidden">Партнёры</h2>
         <ul class="partners-list list-reset">
-          <li class="partners-item"><a class="partners-link" href="#" target="_blank"><img
+          <li class="partners-item"><a class="partners-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img
                 src="img/partners-links/logo-html.png" width="200" height="68" alt="html-academy"></a>
           </li>
-          <li class="partners-item"><a class="partners-link" href="#" target="_blank"><img
+          <li class="partners-item borodinski-item"><a class="partners-link" href="№" target="_blank"><img
                 src="img/partners-links/logo-borodinski.png" width="209" height="90" alt="borodinski"></a>
           </li>
-          <li class="partners-item"><a class="partners-link" href="#" target="_blank"><img
+          <li class="partners-item pink-item"><a class="partners-link" href="#" target="_blank"><img
                 src="img/partners-links/logo-pink.png" width="185" height="52" alt="pink"></a>
           </li>
-          <li class="partners-item"><a class="partners-link" href="#" target="_blank"><img
+          <li class="partners-item mishka-item"><a class="partners-link" href="#" target="_blank"><img
                 src="img/partners-links/logo-miska.png" width="173" height="84" alt="mishka"></a>
           </li>
         </ul>
@@ -156,8 +156,8 @@
   <footer class="page-footer">
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <img class="footer-map" src="img/map.jpg" width="100%" height="416" alt="map-footer">
-      <div class="container">
+      <img class="footer-map" src="img/map.jpg" width="1440" height="416" alt="map-footer">
+      <div class="contacts-wrapper">
         <section class="contacts">
           <h2 class="contacts-title">Nerds design studio</h2>
           <p class="contacts-text">191186, Санкт-Петербург,ул. Б. Конюшенная, д. 19/8</p>
@@ -194,22 +194,21 @@
   </footer>
   <section class="pop-up">
     <h3>Напишите нам</h3>
-    <button type="button">Закрыть</button>
-    <form action="blank.html" method="post">
-      <!-- Не понял как стилизовать placeholder-->
-      <p>
-        <label class="pop-up-text" for="meeting-name">Ваше имя:</label>
+    <button class="button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <form class="mail-form" action="blank.html" method="post">
+      <p class="mail-item">
+        <label class="pop-up-text" for="meeting-name">Ваше имя:</label><br>
         <input id="meeting-name" type="text" name="name" placeholder="Имя Фамилия">
       </p>
-      <p>
-        <label class="pop-up-text" for="email-login">Ваш email:</label>
+      <p class="mail-item">
+        <label class="pop-up-text" for="email-login">Ваш email:</label><br>
         <input id="email-login" type="email" name="login" placeholder="email@example.com">
       </p>
-      <p>
-        <label class="pop-up-text" for="free-text">Текст письма:</label>
+      <p class="mail-item-text">
+        <label class="pop-up-text" for="free-text">Текст письма:</label><br>
         <textarea rows="5" cols="45" name="text" id="free-text" placeholder="В свободной форме"></textarea>
       </p>
-      <p><button class="button" type="submit">Отправить</button></p>
+      <p><button class="button more" type="submit">Отправить</button></p>
     </form>
   </section>
 </body>
