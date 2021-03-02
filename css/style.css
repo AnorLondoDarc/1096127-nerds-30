@@ -98,10 +98,15 @@
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .button {
   display: inline-flex;
@@ -157,20 +162,16 @@
   color: var(--basic-black);
   padding-bottom: 13px;
 }
-.basket-shop a:hover:not(.current) {
+.site-navigation a:hover:not(.current),
+.basket-shop .basket:hover:not(.current) {
   color: var(--basic-light-red);
 }
-.basket-shop a:active:not(.current) {
+.site-navigation a:active:not(.current),
+.basket-shop .basket:active:not(.current) {
   color: var(--basic-black);
   opacity: 0.3;
 }
-.site-navigation a:hover:not(.current) {
-  color: var(--basic-light-red);
-}
-.site-navigation a:active:not(.current) {
-  color: var(--basic-black);
-  opacity: 0.3;
-}
+
 .current {
   border-bottom: 2px solid var(--basic-light-red);
 
@@ -179,7 +180,7 @@
   position: relative;
   padding-left: 50px;
 }
-.basket::before {
+.basket-icon::before {
   content: "";
   width: 15px;
   height: 15px;
@@ -190,10 +191,11 @@
   left: 0;
   top: 5px;
 }
-.basket:active::before {
+.basket-shop .basket-icon:active::before {
   opacity: 1;
 }
 .site-navigation {
+  margin-left: -40px;
   display: flex;
   min-width: 427px;
   flex-wrap: wrap;
@@ -222,6 +224,7 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: 760px 430px;
+  object-fit: contain;
 }
 .slider-2 {
   display: none;
@@ -229,6 +232,7 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: 760px 430px;
+  object-fit: contain;
 }
 .slider-3 {
   display: none;
@@ -236,6 +240,7 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: 760px 430px;
+  object-fit: contain;
 }
 .slider-item h2 {
   margin-bottom: 25px;
@@ -264,8 +269,15 @@
   height: 18px;
 }
 .controls .slider-btn {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 0;
+  border: 1px solid var(--basic-white);
+  background-color: var(--basic-white);
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+
 }
 .slider .button {
 
@@ -701,7 +713,7 @@ background-color: var(--basic-red);
   border: 2px solid var(--basic-gray-input);
   border-radius: 1px;
 }
-.mail-item input:focus,
+.mail-item input[type="text"]:focus,
 .mail-item-text textarea:focus {
   border: 2px solid var(--basic-black);
   border-radius: 1px;
@@ -866,15 +878,19 @@ background-color: var(--basic-red);
 .sort-item a {
   margin-right: 25px;
 }
+.up:not(.active),
+.down:not(.active),
 .sort-item a:not(.active) {
   color: var(--basic-black);
   opacity: 0.3;
 }
-.up-down a:hover,
+.up:hover,
+.down:hover,
 .sort-item a:hover {
   opacity: 0.6;
 }
-.up-down a:active,
+.up:active,
+.down:active,
 .sort-item a:active {
   opacity: 1;
 }
@@ -988,7 +1004,7 @@ background-color: var(--basic-red);
 .filter-input-radio:checked + label:hover::after,
 .filter-input-checkbox + label:hover::before,
 .filter-input-checkbox:checked + label:hover::after {
-  opacity: 10;
+  opacity: 1;
 }
 
 .filter-input-radio + label::before {
@@ -1051,6 +1067,9 @@ background-color: var(--basic-red);
   width: 360px;
   height: 620px;
   padding-top: 40px;
+}
+.catalog-item img {
+  object-fit: contain;
 }
 .hidden-descriptions {
   padding: 20px 50px;
