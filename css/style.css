@@ -92,6 +92,12 @@
   height: 416px;
 
 }
+.map iframe {
+  display: block;
+  margin: 0 auto;
+  height: 416px;
+
+}
 .page-footer .map {
   margin-bottom: 75px;
 }
@@ -683,6 +689,7 @@ background-color: var(--basic-red);
   width: 360px;
   margin-bottom: 37px;
 }
+
 .mail-item input {
   width: 360px;
   height: 50px;
