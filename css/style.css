@@ -96,6 +96,8 @@
   display: block;
   margin: 0 auto;
   height: 416px;
+  width: 100%;
+  border:0;
 
 }
 .page-footer .map {
@@ -125,6 +127,7 @@
   background-color: var(--basic-light-red);
   padding: 16px 0 ;
   border:none;
+  border-radius: 3px;
 }
 
 .list-reset {
@@ -144,6 +147,7 @@
   margin-top: -26px;
 
 }
+.header-logo[href]:focus,
 .header-logo[href]:hover {
   opacity: 0.7;
 }
@@ -225,12 +229,11 @@
   padding-top: 78px;
 }
 .slider-1 {
+  display: none;
   background-image: url(../img/nerds-slider/nerds-slider-show.png);
-  background-position: right;
-  margin-right: 5px;
+  background-position: 395px;
   background-repeat: no-repeat;
   background-size: 760px 430px;
-  object-fit: contain;
 }
 .slider-2 {
   display: none;
@@ -245,8 +248,9 @@
   background-image: url(../img/nerds-slider/nerds-slider-third.png);
   background-position: right;
   background-repeat: no-repeat;
-  background-size: 760px 430px;
-  object-fit: contain;
+}
+.slide-current {
+  display: flex;
 }
 .slider-item h2 {
   margin-bottom: 25px;
@@ -255,7 +259,7 @@
   line-height: 55px;
 }
 .slider-info {
-  width: 500px;
+  max-width: 520px;
 }
 .slider p {
   margin-bottom: 38px;
@@ -273,16 +277,30 @@
   width: 88px;
   height: 18px;
 }
-.controls .slider-btn {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 1px solid var(--basic-white);
-  background-color: var(--basic-white);
-  margin: 5px;
-  padding: 5px;
-  cursor: pointer;
 
+
+.controls .slider-btn {
+  display: flex;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background: var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
+  border:none;
+  outline: none;
+}
+.controls .active::before {
+   content: "";
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background-color: transparent;
+   border: 2px solid var(--basic-toggle-gray);
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%, -50%);
 }
 .slider .button {
 
@@ -293,6 +311,7 @@
 }
 .more:active{
   background-color: var(--basic-dark-red);
+  box-shadow: inset 0 3px 0 var(--basic-black-30);
 }
 .more:active{
   color:var(--basic-white-30);
@@ -326,6 +345,9 @@
  .services-item-link {
    padding: 16px 40px;
    margin-bottom: 80px;
+ }
+ .services-item-link:active {
+   box-shadow: inset 0px 3px 0px  var(--basic-black-30);
  }
  .services-item-title {
   font-weight: 700;
@@ -542,7 +564,8 @@
 .social-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 9px;
+  column-gap: 10px;
+  margin: -10px;
 }
 
 
@@ -628,6 +651,7 @@
   opacity: .3;
 }
 
+.social-btn:focus,
 .social-btn:hover {
 background-color: var(--basic-red);
 }
@@ -715,6 +739,7 @@ background-color: var(--basic-red);
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 10px;
+  display: block;
 }
 .pop-up .button {
   width: 260px;
@@ -739,12 +764,14 @@ background-color: var(--basic-red);
 .mail-item input:invalid {
  border: 2px solid var(--basic-red);
 }
+.pop-up header {
+  display: flex;
+  justify-content: space-between;
+}
 .button-close {
-   position:absolute;
    width: 40px;
    height: 40px;
    right: 90px;
-   top:70px;
    border: 0;
    background-color: transparent;
    cursor: pointer;
@@ -756,7 +783,8 @@ background-color: var(--basic-red);
   content: "";
   width: 29px;
   height: 4px;
-  left: 5px;
+  top: 80px;
+  right:105px;
   background-color: var(--basic-red);
   opacity: .3;
 }
@@ -766,6 +794,8 @@ background-color: var(--basic-red);
 .button-close::after {
   transform: rotate(-45deg);
 }
+.button-close:focus::before,
+.button-close:focus::after,
 .button-close:hover::before,
 .button-close:hover::after {
   background-color: var(--basic-red);
@@ -900,6 +930,8 @@ background-color: var(--basic-red);
 }
 .selection-filter {
   width: 360px;
+  display: flex;
+  justify-content: space-between;
 }
 .sort-list {
   display: flex;
@@ -915,6 +947,10 @@ background-color: var(--basic-red);
   color: var(--basic-black);
   opacity: 0.3;
 }
+
+.up:focus:not(.active),
+.down:focus:not(.active),
+.sort-item a:focus:not(.active),
 .up:hover:not(.active),
 .down:hover:not(.active),
 .sort-item a:hover:not(.active) {
@@ -926,9 +962,6 @@ background-color: var(--basic-red);
   opacity: 1;
 }
 
-.selection-filter {
-  display: flex;
-}
 .selection-filter ul,
 .selection-filter li {
   margin: 0;
@@ -1088,7 +1121,7 @@ background-color: var(--basic-red);
   border: none;
   border-radius: 3px;
 }
-.filter .submit-btn:focus ,
+.filter .submit-btn:focus,
 .filter .submit-btn:hover {
  background-color: var(--basic-medium-gray);
 }
@@ -1096,12 +1129,14 @@ background-color: var(--basic-red);
   background-color: var(--basic-mdl-gray);
   color: var(--basic-black-30);
   outline: none;
+  box-shadow: inset 0 3px 0 var(--basic-black-30);
 }
                                                                         /*catalog-cards*/
 .catalog-cards {
   margin-bottom: 55px;
 }
 .catalog-item {
+  display: block;
   position: relative;
   width: 360px;
   height: 620px;
@@ -1120,8 +1155,9 @@ background-color: var(--basic-red);
   height: 230px;
   background-color: var(--basic-light-gray);
 }
-.catalog-item:active .hidden-descriptions ,
-.catalog-item:hover .hidden-descriptions ,
+
+
+.catalog-item:hover .hidden-descriptions,
 .catalog-item:focus .hidden-descriptions {
   display: flex;
   flex-wrap: wrap;
@@ -1150,10 +1186,9 @@ background-color: var(--basic-red);
   box-shadow: 25px 0px 0px 0px var(--basic-white),
               50px 0px 0px 0px var(--basic-white);
 }
-.catalog-item:focus::before ,
+.catalog-item:focus::before,
 .catalog-item:hover::before  {
   background-color: var(--basic-die-gray);
-  content: "";
 }
 .caption-desc-cards {
   display: inline-flex;
@@ -1165,6 +1200,7 @@ background-color: var(--basic-red);
   text-transform: uppercase;
   color: var(--basic-black);
 }
+.caption-desc-cards:focus,
 .caption-desc-cards:hover {
   color: var(--basic-light-red);
 }
@@ -1189,11 +1225,13 @@ background-color: var(--basic-red);
   padding: 15px 72px;
   width: 200px;
 }
+.hidden-descriptions .button:focus,
 .hidden-descriptions .button:hover{
   background-color: var(--basic-red);
 }
 .hidden-descriptions .button:active{
   background-color: var(--basic-dark-red);
+  box-shadow: inset 0 3px 0 var(--basic-black-30);
 }
 .pagination {
   display: flex;
@@ -1206,14 +1244,16 @@ background-color: var(--basic-red);
 .pagination-item {
   margin-right: 11px;
 }
+.pagination a:focus:not(.active),
 .pagination a:hover:not(.active) {
   background-color: var(--basic-medium-gray);
  }
  .pagination a:active:not(.active) {
    background-color: var(--basic-mdl-gray);
  }
- .pagination-item a:active {
+ .pagination-item a:active:not(.active) {
    color: var(--basic-black-30);
+   box-shadow: inset 0 3px 0 var(--basic-black-30);
  }
 .pagination-list .active {
   background-color: var(--basic-white);
@@ -1233,6 +1273,7 @@ background-color: var(--basic-red);
 }
 .pagination .next {
   padding: 15px 77px;
+  text-transform: uppercase;
 }
 .phone {
   color:var(--basic-black);
