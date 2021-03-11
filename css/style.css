@@ -171,6 +171,8 @@
   text-decoration: none;
   color: inherit;
 }
+.site-navigation a:focus:not(.current),
+.basket-shop .basket:focus:not(.current),
 .site-navigation a:hover:not(.current),
 .basket-shop .basket:hover:not(.current) {
   color: var(--basic-light-red);
@@ -306,6 +308,7 @@
 
   padding: 15px 55px;
 }
+.more:focus,
 .more:hover{
   background-color:var(--basic-red);
 }
