@@ -290,7 +290,6 @@
   border-radius: 50%;
   cursor: pointer;
   border:none;
-  outline: none;
 }
 .controls .active::before {
    content: "";
@@ -406,7 +405,7 @@
 .about-us-holder {
   display:grid;
   grid-template-columns: 1fr 360px;
-  column-gap: 150px;                                /*!P*/
+  column-gap: 150px;                               
 }
 .statistics {
   background-image: url(../img/nerds-illustration.jpg);
@@ -811,7 +810,7 @@ background-color: var(--basic-red);
   opacity: .1;
 }
 
-                                                              /* !Catalog*/
+                                                              
 .catalog-page-title {
   min-height: 235px;
   padding-top: 72px;
