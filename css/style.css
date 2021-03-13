@@ -451,7 +451,7 @@
 }
 
 .descrition-item {
-  padding-left: 33px;
+  padding-left: 35px;
   position: relative;
   margin-bottom: 25px;
 }
@@ -472,6 +472,7 @@
 }
 .table-desc sup {
   top: -9px;
+  left:-3px;
 }
 .table-list {
   display: grid;
@@ -611,8 +612,8 @@
 }
 .marker {
   position: absolute;
-  top: 27px;
-  left: 670px;
+  top: 30px;
+  left: 676px;
 }
 
 .map p {
