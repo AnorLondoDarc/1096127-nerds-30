@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
@@ -110,9 +110,9 @@
                   <li class="sort-item"><a href="blank.html">По типу</a></li>
                   <li class="sort-item"><a href="blank.html">По названию</a></li>
                 </ul>
-                <div class="up-down">
-                  <a  class="down active"></a>
-                  <a href="#" class="up"></a>
+                <div class="sorters up-down">
+                  <a class="down active"><span class="visually-hidden">Сортировщик вниз</span></a>
+                  <a class="up" href="#"><span class="visually-hidden">Сортировщик вверх</span></a>
                 </div>
               </div>
             </section>
@@ -201,6 +201,7 @@
     <footer class="page-footer">
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
+        <img class="footer-map" src="img/map.jpg" width="1440" height="416" alt="Статичная карта с адресом компании">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1680.6138200007874!2d30.320863837413608!3d59.93881396071906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1615284529808!5m2!1sru!2sru"   allowfullscreen="" loading="lazy"></iframe>
         <section class="contacts">
           <h2 class="contacts-title">Nerds design studio</h2>
@@ -238,15 +239,20 @@
     <section class="pop-up">
       <header>
         <h3>Напишите нам</h3>
-        <button class="button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <button class="button-close" type="button">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z" fill="currentColor"/>
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
       </header>
       <form class="mail-form" action="blank.html" method="post">
         <p class="mail-item">
-          <label class="pop-up-text" for="meeting-name">Ваше имя:</label>
+          <label class="pop-up-text pop-up-form" for="meeting-name">Ваше имя:</label>
           <input id="meeting-name" type="text" name="name" placeholder="Имя Фамилия">
         </p>
         <p class="mail-item">
-          <label class="pop-up-text" for="email-login">Ваш email:</label>
+          <label class="pop-up-text pop-up-form" for="email-login">Ваш email:</label>
           <input id="email-login" type="email" name="login" placeholder="email@example.com">
         </p>
         <p class="mail-item-text">
