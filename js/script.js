@@ -12,3 +12,12 @@ contactsLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     mailLink.classList.remove("pop-up-show");
   });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (mailLink.classList.contains("pop-up-show")) {
+        evt.preventDefault();
+        mailLink.classList.remove("pop-up-show");
+      }
+    }
+  });
