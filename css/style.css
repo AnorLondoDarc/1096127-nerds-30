@@ -600,9 +600,10 @@
   top: 13px;
 }
 
-.partners-item:nth-child(5n)::before,
-.partners-item:first-child::before {
-  content: "";
+.partners-item:nth-child(1)::before,
+.partners-item:nth-child(5)::before,
+.partners-item:nth-child(9)::before,
+.partners-item:nth-child(13)::before {
   display: none;
 }
 
@@ -1328,7 +1329,7 @@
   display: none;
   bottom: 0;
   width: 360px;
-  min-height: 230px;
+  height: 230px;
   background-color: var(--basic-light-gray);
   border-radius: 0 0 5px 5px;
 }
@@ -1396,6 +1397,8 @@
 
 .hidden-descriptions .cards-text {
   margin-bottom: 32px;
+  height: 50px;
+  overflow: auto;
 }
 
 .cards-text {
